@@ -20,21 +20,21 @@ services:
     container_name: redis
 
   user:
-    image: manjunatha1204/user.v1
+    image: manjunatha1204/user:v1
     container_name: user
     depends_on:
     - redis
     - mongodb
   
   cart:
-    image: manjunatha1204/cart.v1
+    image: manjunatha1204/cart:v1
     container_name: cart
     depends_on:
     - catalouge
     - redis
 
   mysql:
-    image: manjunatha1204/mysql.v1
+    image: manjunatha1204/mysql:v1
     container_name: mysql
   
   shipping:
